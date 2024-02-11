@@ -3,7 +3,7 @@ using UnityEngine;
 public class FoodItemGenerator : MonoBehaviour
 {
     [SerializeField] GameObject foodItemPrefab;
-    [SerializeField] GameObject UI;
+    [SerializeField] GameObject FoodUI;
     [SerializeField] GameObject interactButton;
 
     private Camera mainCamera;
@@ -44,6 +44,8 @@ public class FoodItemGenerator : MonoBehaviour
 
     public void GenerateFoodItem()
     {
-/*        Instantiate(foodItemPrefab, transform.position, Quaternion.identity);
-*/    }
+       Instantiate(foodItemPrefab, transform.position, Quaternion.identity);
+        FoodUI.SetActive(true);
+
+    }
 }
