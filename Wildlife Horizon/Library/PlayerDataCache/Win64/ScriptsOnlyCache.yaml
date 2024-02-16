@@ -25,6 +25,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -89,6 +97,27 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: QuitGame
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: ReturntoMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: PauseMenu
+    methodName: ResumeGame
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   sceneClasses:
     Assets/Scenes/MainMenu.unity:
     - Class: 1
@@ -140,9 +169,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 21198}
     - Class: 114
-      Script: {instanceID: 29552}
+      Script: {instanceID: 30860}
     - Class: 114
-      Script: {instanceID: 29582}
+      Script: {instanceID: 30890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -212,6 +241,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 18182}
     - Class: 114
       Script: {instanceID: 18230}
+    - Class: 114
+      Script: {instanceID: 20084}
     - Class: 114
       Script: {instanceID: 20156}
     - Class: 114
@@ -393,7 +424,7 @@ ScriptsOnlyBuild:
     className: Benchmark01_UGUI
   - hash:
       serializedVersion: 2
-      Hash: 466f0179c095142646c0f2817390234e
+      Hash: 3422fed12e0286e1d30deed31c3b3f13
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: playermovement
@@ -465,7 +496,7 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: 77a75cbe8d7dae8b5632f3c1b005bb25
+      Hash: c02c0fc754c4e196f2d3dbe747cf5634
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PauseMenu
@@ -537,7 +568,7 @@ ScriptsOnlyBuild:
     className: Benchmark04
   - hash:
       serializedVersion: 2
-      Hash: 07eaffaf4d63fa712479e29b6f0e076f
+      Hash: d3cd895fbcf8907d3adde72d64a3e2f6
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: FoodItemGenerator
