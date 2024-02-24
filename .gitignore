@@ -223,3 +223,4 @@ Wildlife Horizon/Library/PackageCache/com.unity.burst@1.8.10/.Runtime/System.Sec
 Wildlife Horizon/Library/PackageCache/com.unity.burst@1.8.10/.Runtime/System.Runtime.Serialization.Primitives.dll
 Wildlife Horizon/Library/PackageCache/com.unity.burst@1.8.10/.Runtime/System.Runtime.CompilerServices.Unsafe.dll
 Wildlife Horizon/Library/PackageCache/com.unity.burst@1.8.10/.Runtime/System.Reflection.Metadata.dll
+*.log
