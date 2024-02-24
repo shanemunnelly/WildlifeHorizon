@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
-
+using TMPro;
 public class BunnyMovement : MonoBehaviour
 {
     GameObject player;
@@ -18,10 +18,18 @@ public class BunnyMovement : MonoBehaviour
     bool playerInSight;
     bool foodInSight;
     bool hasFood = false;
-
+    bool isEating = false;
+    [SerializeField] GameObject foodItem;
+    Animator animationController;
+    [SerializeField] GameObject FoodIcon;
+    [SerializeField] GameObject FoodEatButton;
+    [SerializeField] GameObject book;
+    [SerializeField] TextMeshProUGUI mainText;
+    //[SerializeField] GameObject EatText;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animationController = GetComponent<Animator>();
         player = GameObject.Find("Player");
 
         agent.speed = animalSpeed;
@@ -29,28 +37,75 @@ public class BunnyMovement : MonoBehaviour
 
     void Update()
     {
+        if (isEating) return;
+
+
         playerInSight = Physics.CheckSphere(transform.position, sightRange, playerLayer);
         foodInSight = Physics.CheckSphere(transform.position, foodDetectionRange, foodLayer);
 
         if (hasFood && playerInSight)
         {
-            
             FollowPlayerWithFood();
         }
         else
         {
             if (!playerInSight && !foodInSight) Patrol();
             if (playerInSight) Flee();
-          
+
 
         }
         if (Input.GetKeyDown(KeyCode.E)) // Change the key as needed
         {
             InteractWithObject();
         }
+        if (Input.GetKeyDown(KeyCode.J)) // Change the key as needed
+        {
+            book.SetActive(!book.activeSelf);
+
+        }
+        //if (Input.GetKeyDown(KeyCode.J))
+        //{
+        //    EatText.SetActive(true);
+        //}    
+
+        if (Input.GetKeyDown(KeyCode.F) && hasFood && agent.isStopped && !isEating)
+        {
+            isEating = true;
+            FoodIcon.SetActive(false);
+            FoodEatButton.SetActive(false);
+            foodItem.SetActive(true);
+            animationController.SetBool("isEating", true);
+            animationController.SetBool("isRunning", false);
+            Invoke("DoneEating", 2f);
+
+        }
+        else if (!agent.isStopped)
+        {
+            FoodEatButton.SetActive(false);
+
+            animationController.SetBool("isRunning", true);
+
+        }
+        else
+        {
+            FoodEatButton.SetActive(true);
+            animationController.SetBool("isRunning", false);
+        }
+    }
+    void DoneEating()
+    {
+        foodItem.SetActive(false);
+        animationController.SetBool("isEating", false);
+        animationController.SetBool("isRunning", true);
+        agent.isStopped = false;
+        isEating = hasFood = false;
+        mainText.enabled = true;
+        //Display Information here
+        //   EatText.SetActive(true);
+
     }
 
-  
+
 
     void FollowPlayerWithFood()
     {
@@ -65,6 +120,7 @@ public class BunnyMovement : MonoBehaviour
         {
             agent.velocity = Vector3.zero;
             agent.isStopped = true;
+
         }
         else
         {
@@ -134,7 +190,7 @@ public class BunnyMovement : MonoBehaviour
             {
                 // Generate the food item
                 foodGenerator.GenerateFoodItem();
-
+                print("Food Generated");
                 // Set the hasFood flag to true
 
                 hasFood = true;
@@ -142,5 +198,9 @@ public class BunnyMovement : MonoBehaviour
                 // You can add additional logic here if needed
             }
         }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 }
