@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 47
+  controlID: 111
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -525,7 +525,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/BEDRILL/Lowpoly_Trees_Cartoon_Free/Models
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -533,16 +533,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/BEDRILL/Lowpoly_Trees_Cartoon_Free/Models
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\dysle\Documents\GitHub\WildlifeHorizon\Wildlife Horizon
+  m_LastProjectPath: C:\Users\dysle\Documents\GitHub\Fixed\WildlifeHorizon\Wildlife
+    Horizon
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 605e0000
-    m_LastClickedID: 24160
-    m_ExpandedIDs: 000000003e5e000000ca9a3bffffff7f
+    m_SelectedIDs: cc5a0000
+    m_LastClickedID: 23244
+    m_ExpandedIDs: 00000000d4590000205a0000e068000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -570,7 +571,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003e5e0000
+    m_ExpandedIDs: 00000000e0680000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -710,9 +711,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 1e5c0000
-      m_LastClickedID: 23582
-      m_ExpandedIDs: 2cfbffff4c5b0000f05b0000
+      m_SelectedIDs: 8ac5ffff
+      m_LastClickedID: -14966
+      m_ExpandedIDs: 26dcffff3a670000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1079,9 +1080,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -59.951088, y: -58.09501, z: -105.630196}
+    m_Target: {x: -177.93588, y: -57.591114, z: 31.435204}
     speed: 2
-    m_Value: {x: -59.951088, y: -58.09501, z: -105.630196}
+    m_Value: {x: -177.93588, y: -57.591114, z: 31.435204}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1127,13 +1128,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.051101178, y: -0.945598, z: 0.26414496, w: 0.18294714}
+    m_Target: {x: 0.13987549, y: -0.6594023, z: 0.12674873, w: 0.72772187}
     speed: 2
-    m_Value: {x: 0.050308287, y: -0.94613826, z: 0.26429588, w: 0.18010871}
+    m_Value: {x: 0.14115685, y: -0.6581125, z: 0.12752478, w: 0.72849166}
   m_Size:
-    m_Target: 109.31215
+    m_Target: 108.58664
     speed: 2
-    m_Value: 109.31215
+    m_Value: 108.58664
   m_Ortho:
     m_Target: 0
     speed: 2
