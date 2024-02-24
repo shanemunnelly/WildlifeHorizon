@@ -1221,6 +1221,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7586ba7c70815f94e9d9b770d34f5151, type: 3}
   m_PrefabInstance: {fileID: 338943142}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &297935548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297935542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2d8418b0b9634b1892b0268dd9c2743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boneShape: 1
+  drawBones: 1
+  drawTripods: 0
+  boneSize: 1
+  tripodSize: 1
+  boneColor: {r: 0, g: 0, b: 1, a: 0.5}
+  m_Transforms:
+  - {fileID: 338943185}
+  - {fileID: 338943184}
+  - {fileID: 338943183}
+  - {fileID: 338943182}
+  - {fileID: 338943181}
+  - {fileID: 338943180}
+  - {fileID: 338943179}
+  - {fileID: 338943178}
+  - {fileID: 338943177}
+  - {fileID: 338943176}
+  - {fileID: 338943175}
+  - {fileID: 338943174}
+  - {fileID: 338943173}
+  - {fileID: 338943172}
+  - {fileID: 338943171}
+  - {fileID: 338943170}
+  - {fileID: 338943169}
+  - {fileID: 338943168}
+  - {fileID: 338943167}
+  - {fileID: 338943166}
+  - {fileID: 338943165}
+  - {fileID: 338943164}
+  - {fileID: 338943163}
+  - {fileID: 338943162}
+  - {fileID: 338943161}
+  - {fileID: 338943160}
+  - {fileID: 338943159}
+  - {fileID: 338943158}
+  - {fileID: 338943157}
+  - {fileID: 338943156}
+  - {fileID: 338943155}
+  - {fileID: 338943154}
+  - {fileID: 338943153}
+  - {fileID: 338943152}
+  - {fileID: 338943151}
+  - {fileID: 338943150}
+  - {fileID: 338943149}
+  - {fileID: 338943148}
+  - {fileID: 338943147}
+  - {fileID: 338943146}
+  - {fileID: 338943145}
+  - {fileID: 338943144}
+  - {fileID: 338943143}
 --- !u!1001 &338943142
 PrefabInstance:
   m_ObjectHideFlags: 0
