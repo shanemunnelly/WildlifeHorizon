@@ -5,12 +5,13 @@ ScriptsOnlyBuild:
     - FoodItemGenerator
     - MainMenu
     - MouseLook
+    - Movetowards
     - PauseMenu
     - playermovement
-    Unity.AI.Navigation.Editor.dll:
-    - Unity.AI.Navigation.Editor.NavMeshAssetManager
     Unity.AI.Navigation.dll:
     - Unity.AI.Navigation.NavMeshSurface
+    Unity.Animation.Rigging.dll:
+    - UnityEngine.Animations.Rigging.BoneRenderer
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -141,37 +142,37 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16666}
+      Script: {instanceID: 16722}
     - Class: 114
-      Script: {instanceID: 17260}
-    - Class: 114
-      Script: {instanceID: 17684}
+      Script: {instanceID: 17398}
     - Class: 114
       Script: {instanceID: 17890}
     - Class: 114
-      Script: {instanceID: 18182}
+      Script: {instanceID: 18124}
     - Class: 114
-      Script: {instanceID: 19078}
+      Script: {instanceID: 18456}
     - Class: 114
-      Script: {instanceID: 19190}
+      Script: {instanceID: 19480}
     - Class: 114
-      Script: {instanceID: 19446}
+      Script: {instanceID: 19604}
     - Class: 114
-      Script: {instanceID: 20084}
+      Script: {instanceID: 19888}
     - Class: 114
-      Script: {instanceID: 20156}
+      Script: {instanceID: 20612}
     - Class: 114
-      Script: {instanceID: 20264}
+      Script: {instanceID: 20696}
     - Class: 114
-      Script: {instanceID: 20726}
+      Script: {instanceID: 20824}
     - Class: 114
-      Script: {instanceID: 20876}
+      Script: {instanceID: 21350}
     - Class: 114
-      Script: {instanceID: 21198}
+      Script: {instanceID: 21516}
     - Class: 114
-      Script: {instanceID: 30860}
+      Script: {instanceID: 21880}
     - Class: 114
-      Script: {instanceID: 30890}
+      Script: {instanceID: 27268}
+    - Class: 114
+      Script: {instanceID: 27298}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -226,35 +227,39 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16666}
+      Script: {instanceID: 16722}
     - Class: 114
-      Script: {instanceID: 17674}
-    - Class: 114
-      Script: {instanceID: 17684}
+      Script: {instanceID: 17878}
     - Class: 114
       Script: {instanceID: 17890}
     - Class: 114
-      Script: {instanceID: 17934}
+      Script: {instanceID: 18124}
     - Class: 114
-      Script: {instanceID: 17970}
+      Script: {instanceID: 18174}
     - Class: 114
-      Script: {instanceID: 18182}
+      Script: {instanceID: 18212}
     - Class: 114
-      Script: {instanceID: 18230}
+      Script: {instanceID: 18428}
     - Class: 114
-      Script: {instanceID: 20084}
+      Script: {instanceID: 18456}
     - Class: 114
-      Script: {instanceID: 20156}
+      Script: {instanceID: 18508}
     - Class: 114
-      Script: {instanceID: 20338}
+      Script: {instanceID: 20612}
     - Class: 114
-      Script: {instanceID: 20726}
+      Script: {instanceID: 20696}
     - Class: 114
-      Script: {instanceID: 20876}
+      Script: {instanceID: 20906}
     - Class: 114
-      Script: {instanceID: 21198}
+      Script: {instanceID: 21350}
     - Class: 114
-      Script: {instanceID: 21998}
+      Script: {instanceID: 21516}
+    - Class: 114
+      Script: {instanceID: 21880}
+    - Class: 114
+      Script: {instanceID: 22790}
+    - Class: 114
+      Script: {instanceID: 23038}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -308,6 +313,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 65e5085b96e7af5186f094c75c2d8f7f
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: Rig
+  - hash:
+      serializedVersion: 2
+      Hash: c0e97241d89036e9763306181a147128
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: TwistChainConstraint
   - hash:
       serializedVersion: 2
       Hash: f45600bcc886206dd55a3208474aad61
@@ -502,6 +519,12 @@ ScriptsOnlyBuild:
     className: PauseMenu
   - hash:
       serializedVersion: 2
+      Hash: ddd1f1c29a5c88119068b2d86a79d825
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Plexus
+  - hash:
+      serializedVersion: 2
       Hash: 28fd3d045acc780719a17f02073eb448
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -514,7 +537,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 4ec69797a1dde8d4a69bd0b18e3e29c2
+      Hash: c63ccfdd0e88d79ce229745db444a739
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: BunnyMovement
@@ -526,16 +549,16 @@ ScriptsOnlyBuild:
     className: UnityOnButtonClickMessageListener
   - hash:
       serializedVersion: 2
-      Hash: e23d2210701e34e6850023cabe554c1f
-    assemblyName: Unity.VisualScripting.Core
-    namespaceName: Unity.VisualScripting
-    className: UnityOnInputFieldEndEditMessageListener
-  - hash:
-      serializedVersion: 2
       Hash: bf40c7a9dc15bc219687c9838aa9b41f
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: e23d2210701e34e6850023cabe554c1f
+    assemblyName: Unity.VisualScripting.Core
+    namespaceName: Unity.VisualScripting
+    className: UnityOnInputFieldEndEditMessageListener
   - hash:
       serializedVersion: 2
       Hash: b98001682cba83786775c9e415b89a61
@@ -544,10 +567,22 @@ ScriptsOnlyBuild:
     className: UnityOnDropdownValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 1cb038fd47d82e17c4a69c2697cc2ec0
+    assemblyName: Unity.Animation.Rigging.DocCodeExamples
+    namespaceName: DocCodeExamples
+    className: CustomRigBuilderEvaluator
+  - hash:
+      serializedVersion: 2
       Hash: 1d830bc5cfaaf24301dffea2877f4bea
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: VertexShakeA
+  - hash:
+      serializedVersion: 2
+      Hash: 4457ce3d43ff730d542f03e62399ff70
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: BoneRenderer
   - hash:
       serializedVersion: 2
       Hash: a1ac4c50e55874de16eee3db71aa9784
@@ -566,6 +601,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: Benchmark04
+  - hash:
+      serializedVersion: 2
+      Hash: 041d89bf0470df44922eec73e9bf30e5
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: TwoBoneIKConstraint
   - hash:
       serializedVersion: 2
       Hash: d3cd895fbcf8907d3adde72d64a3e2f6
@@ -718,6 +759,12 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 01177f6dc9d81555eb41a56141709400
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: U10PS_DissolveOverTime
+  - hash:
+      serializedVersion: 2
       Hash: 4718916586b3818eb69bf65df61f0f3a
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -760,6 +807,12 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
+      Hash: a9e7243bc273a0dde39337a54d284ecf
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: U10PS_ExampleReview
+  - hash:
+      serializedVersion: 2
       Hash: 4c1b1c34ab651c1de48d1fd63cea9502
     assemblyName: Assembly-CSharp
     namespaceName: UnityStandardAssets.Utility
@@ -782,6 +835,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: CameraController
+  - hash:
+      serializedVersion: 2
+      Hash: fbcf9f200f1b87e2ce04092a377bcb7a
+    assemblyName: Unity.Animation.Rigging.DocCodeExamples
+    namespaceName: DocCodeExamples
+    className: CustomPlayableGraphEvaluator
   - hash:
       serializedVersion: 2
       Hash: 9ebc0a3016506a0cbb7e0306dfcb9497
@@ -976,6 +1035,12 @@ ScriptsOnlyBuild:
     className: WarpTextExample
   - hash:
       serializedVersion: 2
+      Hash: b6c81df5ec148563f70cf5fb0e9925ce
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: U10PS_MouseRotation
+  - hash:
+      serializedVersion: 2
       Hash: 17f82e3e7d8f8b07a270a4aad9bfe79d
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -1030,16 +1095,34 @@ ScriptsOnlyBuild:
     className: UnityOnDeselectMessageListener
   - hash:
       serializedVersion: 2
+      Hash: bccf042e84a1f5a4ed47c587fd78c6e3
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: MultiReferentialConstraint
+  - hash:
+      serializedVersion: 2
       Hash: b5007673bbbdb9d12597a1d8201370f5
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Text
   - hash:
       serializedVersion: 2
+      Hash: 3a5957dee23157abcc78371427f290c3
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: MultiAimConstraint
+  - hash:
+      serializedVersion: 2
       Hash: 1ce63d97d1ca25cba2d91d5f32fd5f79
     assemblyName: Unity.VisualScripting.State
     namespaceName: Unity.VisualScripting
     className: StateGraphAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 8ec0e528ed473957d93c3244572ff4c8
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: MultiParentConstraint
   - hash:
       serializedVersion: 2
       Hash: 35e0b31791c377513b6fc7b9568c50cd
@@ -1052,6 +1135,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: caf06d2412ca083a30dfdad7719fd538
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: RigBuilder
   - hash:
       serializedVersion: 2
       Hash: 4166580c620718548959a77fa7b43fc1
@@ -1082,6 +1171,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: UnityStandardAssets.Utility
     className: WaypointProgressTracker
+  - hash:
+      serializedVersion: 2
+      Hash: 3ec218b63ce6384a3b005c0cd27fcef4
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: DampedTransform
   - hash:
       serializedVersion: 2
       Hash: da5a949a0bbd2ff91bc51c5805c2c41f
@@ -1138,6 +1233,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 382a2125cf2f9f8ad4eb978422f97247
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: OrbitCamera
+  - hash:
+      serializedVersion: 2
       Hash: 8bbce9932f67ad8e7f4eefec87800f94
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -1186,6 +1287,12 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 4ea4c44e4bc7a8be3bb8497fc35e1049
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: RigTransform
+  - hash:
+      serializedVersion: 2
       Hash: d2ecd94550edf1b56aff07b1f4e41c57
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1216,6 +1323,12 @@ ScriptsOnlyBuild:
     className: PlayModeRunnerCallback
   - hash:
       serializedVersion: 2
+      Hash: fdf716d1b5b6357f894b35bb8fcaebca
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: ChainIKConstraint
+  - hash:
+      serializedVersion: 2
       Hash: afb7b65d28d5a7423e69a1b076be0064
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -1240,10 +1353,22 @@ ScriptsOnlyBuild:
     className: TMP_TextEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 2f7cb833af938e5749df5eeb25923724
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: MultiPositionConstraint
+  - hash:
+      serializedVersion: 2
       Hash: ee34255e3e86289bde9bad5e07b84cbc
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnScrollRectValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 2dad32af7d5faa52f0bb3d6670290c91
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: OverrideTransform
   - hash:
       serializedVersion: 2
       Hash: 830c3b545f6e6ee60a4cebab90516f2c
@@ -1288,6 +1413,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 02edb445d804b159d6732ef2dacb68ad
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: U10PS_SnowOverTime
+  - hash:
+      serializedVersion: 2
       Hash: 67272c9c30c50b68ef1ce72ac0191c57
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1298,6 +1429,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: SimpleTextureDrawing
+  - hash:
+      serializedVersion: 2
+      Hash: 7a9dde6b4ccad7787410e47b8381b60f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Movetowards
   - hash:
       serializedVersion: 2
       Hash: d0392b7f3f52d5af537ade186b4f51f1
@@ -1384,6 +1521,18 @@ ScriptsOnlyBuild:
     className: VertexZoom
   - hash:
       serializedVersion: 2
+      Hash: 2875aabd0b0eab484a5ff1048f8d06ba
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: BlendConstraint
+  - hash:
+      serializedVersion: 2
+      Hash: f7eb0324729080ddaf63ba59c931745b
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: MultiRotationConstraint
+  - hash:
+      serializedVersion: 2
       Hash: ff76cf6cf52b4db7b95af6ffadca9288
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1394,6 +1543,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnToggleValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: f8564b4c2d4a7f5c7f1fcaab23156624
+    assemblyName: Unity.Animation.Rigging
+    namespaceName: UnityEngine.Animations.Rigging
+    className: TwistCorrection
   - hash:
       serializedVersion: 2
       Hash: 8bf800a764665b085fe469e8aea7f167
@@ -1434,4 +1589,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Plains.unity
-  playerPath: C:/Users/dysle/Downloads/Wildlife/Wildlife Horizon.exe
+  playerPath: C:/Users/dysle/Downloads/Tester/Wildlife Horizon.exe
