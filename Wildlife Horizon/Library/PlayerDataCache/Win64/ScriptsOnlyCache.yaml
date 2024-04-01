@@ -3,6 +3,8 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - BunnyMovement
     - FoodItemGenerator
+    - GiraffeMovement
+    - Ladder
     - MainMenu
     - MouseLook
     - Movetowards
@@ -29,10 +31,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -152,27 +152,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18456}
     - Class: 114
-      Script: {instanceID: 19480}
+      Script: {instanceID: 19482}
     - Class: 114
-      Script: {instanceID: 19604}
+      Script: {instanceID: 19606}
     - Class: 114
-      Script: {instanceID: 19888}
+      Script: {instanceID: 19890}
     - Class: 114
-      Script: {instanceID: 20612}
+      Script: {instanceID: 20614}
     - Class: 114
-      Script: {instanceID: 20696}
+      Script: {instanceID: 20698}
     - Class: 114
-      Script: {instanceID: 20824}
+      Script: {instanceID: 20826}
     - Class: 114
-      Script: {instanceID: 21350}
+      Script: {instanceID: 21352}
     - Class: 114
-      Script: {instanceID: 21516}
+      Script: {instanceID: 21518}
     - Class: 114
-      Script: {instanceID: 21880}
+      Script: {instanceID: 21882}
     - Class: 114
-      Script: {instanceID: 27268}
+      Script: {instanceID: 25760}
     - Class: 114
-      Script: {instanceID: 27298}
+      Script: {instanceID: 25790}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -245,21 +245,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18508}
     - Class: 114
-      Script: {instanceID: 20612}
+      Script: {instanceID: 18900}
     - Class: 114
-      Script: {instanceID: 20696}
+      Script: {instanceID: 20614}
     - Class: 114
-      Script: {instanceID: 20906}
+      Script: {instanceID: 20698}
     - Class: 114
-      Script: {instanceID: 21350}
+      Script: {instanceID: 20908}
     - Class: 114
-      Script: {instanceID: 21516}
+      Script: {instanceID: 21352}
     - Class: 114
-      Script: {instanceID: 21880}
+      Script: {instanceID: 21518}
     - Class: 114
-      Script: {instanceID: 22790}
+      Script: {instanceID: 21882}
     - Class: 114
-      Script: {instanceID: 23038}
+      Script: {instanceID: 22792}
+    - Class: 114
+      Script: {instanceID: 23040}
+    - Class: 114
+      Script: {instanceID: 23772}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -679,6 +683,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 50986096a35de126d55f5b9e2c36e7e9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GiraffeMovement
   - hash:
       serializedVersion: 2
       Hash: 418b67019f13f9684552f2693bae3971
@@ -1531,6 +1541,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Animation.Rigging
     namespaceName: UnityEngine.Animations.Rigging
     className: MultiRotationConstraint
+  - hash:
+      serializedVersion: 2
+      Hash: 5e6767e10fdc59bf6ff778614c138157
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Ladder
   - hash:
       serializedVersion: 2
       Hash: ff76cf6cf52b4db7b95af6ffadca9288

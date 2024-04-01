@@ -376,6 +376,7 @@
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/MoveCamera.cs"
 "Assets/Scripts/MoveTowards.cs"
+"Assets/Scripts/MoveTowardsisland.cs"
 "Assets/Scripts/OldPlayerMovement.cs"
 "Assets/Scripts/OrbitCamera.cs"
 "Assets/Scripts/PathWay.cs"

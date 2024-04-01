@@ -4904,7 +4904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1160599091
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6259,7 +6259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 65b35415e7432ab4c9dc15a479fc2b23, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -6333,7 +6333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1438295789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6783,7 +6783,7 @@ GameObject:
   - component: {fileID: 1527212789}
   - component: {fileID: 1527212788}
   - component: {fileID: 1527212787}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain_(14.70, -4.70, -54.10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9619,15 +9619,15 @@ SceneRoots:
   - {fileID: 1916456147}
   - {fileID: 1527212789}
   - {fileID: 665386332}
+  - {fileID: 1422416459}
+  - {fileID: 2112008609}
+  - {fileID: 1768990557}
   - {fileID: 946115912}
   - {fileID: 1130845498}
-  - {fileID: 1768990557}
   - {fileID: 338943142}
   - {fileID: 1991951094}
-  - {fileID: 1422416459}
   - {fileID: 69911831}
   - {fileID: 1438295792}
-  - {fileID: 2112008609}
   - {fileID: 1577539469}
   - {fileID: 1590804575}
   - {fileID: 1419999544}
