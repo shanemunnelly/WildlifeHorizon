@@ -373,6 +373,7 @@
 "Assets/Scripts/FoodItemGenerator.cs"
 "Assets/Scripts/GiraffeMovement.cs"
 "Assets/Scripts/MainMenu.cs"
+"Assets/Scripts/MonkeyMovement.cs"
 "Assets/Scripts/MouseLook.cs"
 "Assets/Scripts/MoveCamera.cs"
 "Assets/Scripts/MoveTowards.cs"
