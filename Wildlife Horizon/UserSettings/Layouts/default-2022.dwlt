@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 450
     height: 939
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 363
     height: 601
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -419,7 +419,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Assets
+    - Assets/LowPolyTropicalEnvironment_LITE/Prefabs
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -427,17 +427,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Assets
+  - Assets/LowPolyTropicalEnvironment_LITE/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\dysle\Documents\GitHub\Fixed\WildlifeHorizon\Wildlife
     Horizon
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 143}
-    m_SelectedIDs: 666d0000
-    m_LastClickedID: 28006
-    m_ExpandedIDs: 00000000386d00003a6d00003c6d00003e6d0000406d0000426d0000446d0000466d0000486d00005e6d0000806d0000b46d0000c06d000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: de6e0000
+    m_LastClickedID: 28382
+    m_ExpandedIDs: 00000000b46d0000b66d0000b86d0000ba6d0000bc6d0000be6d0000c06d0000c26d0000c46d0000c66d0000c86d0000ca6d0000e26d0000f66d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -465,7 +465,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000386d00003a6d00003c6d00003e6d0000406d0000426d0000446d0000466d0000486d0000
+    m_ExpandedIDs: 00000000b46d0000b66d0000b86d0000ba6d0000bc6d0000be6d0000c06d0000c26d0000c46d0000c66d0000c86d0000ca6d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -493,7 +493,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000ec7c00002a7d0000c86f0000c46f000060c50000a4650000
+    m_ExpandedInstanceIDs: c6230000ec7c00002a7d0000c86f0000c46f000060c50000a4650000da6f0000247000001a66000058700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -604,10 +604,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 753}
-      m_SelectedIDs: 60620000
-      m_LastClickedID: 25184
-      m_ExpandedIDs: b4f5ffffb6f5ffffc2f5ffffd6f5ffffd8f5ffffecf5ffff1cf7ffff08fbffff28fbffff046100005c620000ec640000
+      scrollPos: {x: 0, y: 369}
+      m_SelectedIDs: da640000ee600000b861000004630000c06200009e630000e462000048640000006500009c610000ee6400006e6200001a640000346400009863000068620000ee6100003e6200009a6200006464000030620000206500007463000012630000e862000038620000d46300003e6400008a6100006e630000ae640000d4600000
+      m_LastClickedID: 24788
+      m_ExpandedIDs: 28fbffff04640000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -974,9 +974,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -41.11374, y: 30.783699, z: -12.777175}
+    m_Target: {x: -8.656631, y: 61.210426, z: 109.82589}
     speed: 2
-    m_Value: {x: -41.11374, y: 30.783699, z: -12.777175}
+    m_Value: {x: -8.656631, y: 61.210426, z: 109.82589}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1022,13 +1022,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.33762923, y: -0.0028242406, z: 0.0010119455, w: 0.94127697}
+    m_Target: {x: 0.07358757, y: -0.5830875, z: 0.053146746, w: 0.80732614}
     speed: 2
-    m_Value: {x: 0.33762842, y: -0.0028242338, z: 0.0010119431, w: 0.9412747}
+    m_Value: {x: 0.073666975, y: -0.5818741, z: 0.053036142, w: 0.8081974}
   m_Size:
-    m_Target: 4.679811
+    m_Target: 39.174824
     speed: 2
-    m_Value: 4.478288
+    m_Value: 39.174824
   m_Ortho:
     m_Target: 0
     speed: 2
