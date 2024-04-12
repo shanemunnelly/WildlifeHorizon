@@ -17,6 +17,8 @@ public class MonkeyMovement : MonoBehaviour
     [SerializeField] float carryingFoodSpeed = 2f;
     [SerializeField] float RunningSpeed = 8f;
     [SerializeField] float stoppingDistance = 1.5f;
+    [SerializeField] private Transform targetEmpty;
+    [SerializeField] private float FoodSpeed = 5f;
 
     bool playerInSight;
     bool foodInSight;
@@ -70,7 +72,6 @@ public class MonkeyMovement : MonoBehaviour
         //{
         //    EatText.SetActive(true);
         //}    
-
         if (Input.GetKeyDown(KeyCode.F) && hasFood && agent.isStopped && !isEating)
         {
             isEating = true;
@@ -79,9 +80,13 @@ public class MonkeyMovement : MonoBehaviour
             foodItem.SetActive(true);
             animationController.SetBool("isEating", true);
             animationController.SetBool("isRunning", false);
-            Invoke("DoneEating", 2f);
 
+            // Start a coroutine to smoothly move the food item to the target position
+            StartCoroutine(MoveFoodItem(targetEmpty.position));
+
+            Invoke("DoneEating", 2f);
         }
+
         else if (!agent.isStopped)
         {
             FoodEatButton.SetActive(false);
@@ -93,6 +98,17 @@ public class MonkeyMovement : MonoBehaviour
         {
             FoodEatButton.SetActive(true);
             animationController.SetBool("isRunning", false);
+        }
+    }
+
+    private IEnumerator MoveFoodItem(Vector3 targetPosition)
+    {
+        float distance = Vector3.Distance(foodItem.transform.position, targetPosition);
+        while (distance > 0.01f)
+        {
+            foodItem.transform.position = Vector3.MoveTowards(foodItem.transform.position, targetPosition, FoodSpeed * Time.deltaTime);
+            distance = Vector3.Distance(foodItem.transform.position, targetPosition);
+            yield return null;
         }
     }
     void DoneEating()
