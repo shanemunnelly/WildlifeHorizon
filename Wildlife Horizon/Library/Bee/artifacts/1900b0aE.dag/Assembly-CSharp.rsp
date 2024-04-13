@@ -372,6 +372,7 @@
 "Assets/Scripts/FollowTracker.cs"
 "Assets/Scripts/FoodItemGenerator.cs"
 "Assets/Scripts/GiraffeMovement.cs"
+"Assets/Scripts/HorseMovement.cs"
 "Assets/Scripts/JaguarMovement.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MonkeyMovement.cs"
