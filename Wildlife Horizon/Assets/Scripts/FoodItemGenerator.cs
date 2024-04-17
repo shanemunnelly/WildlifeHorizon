@@ -44,7 +44,6 @@ public class FoodItemGenerator : MonoBehaviour
 
     public void GenerateFoodItem()
     {
-        Instantiate(foodItemPrefab, transform.position, Quaternion.identity);
         FoodUI.SetActive(true);
 
     }
