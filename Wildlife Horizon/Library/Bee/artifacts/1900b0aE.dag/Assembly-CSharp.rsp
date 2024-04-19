@@ -369,6 +369,7 @@
 "Assets/Grass And Flowers Pack 1/Example Scene/SimpleTextureDrawing.cs"
 "Assets/Scripts/BunnyMovement.cs"
 "Assets/Scripts/Climb.cs"
+"Assets/Scripts/DoNotDestroy.cs"
 "Assets/Scripts/FollowTracker.cs"
 "Assets/Scripts/FoodItemGenerator.cs"
 "Assets/Scripts/GiraffeMovement.cs"

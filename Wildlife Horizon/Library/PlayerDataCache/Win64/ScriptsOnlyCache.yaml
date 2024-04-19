@@ -10,6 +10,8 @@ ScriptsOnlyBuild:
     - Movetowards
     - PauseMenu
     - playermovement
+    Unity.AI.Navigation.Editor.dll:
+    - Unity.AI.Navigation.Editor.NavMeshAssetManager
     Unity.AI.Navigation.dll:
     - Unity.AI.Navigation.NavMeshSurface
     Unity.Animation.Rigging.dll:
@@ -31,8 +33,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -144,35 +148,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16722}
     - Class: 114
-      Script: {instanceID: 17398}
+      Script: {instanceID: 17400}
     - Class: 114
-      Script: {instanceID: 17890}
+      Script: {instanceID: 17892}
     - Class: 114
-      Script: {instanceID: 18124}
+      Script: {instanceID: 18126}
     - Class: 114
-      Script: {instanceID: 18456}
+      Script: {instanceID: 18458}
     - Class: 114
-      Script: {instanceID: 19482}
+      Script: {instanceID: 19486}
     - Class: 114
-      Script: {instanceID: 19606}
+      Script: {instanceID: 19610}
     - Class: 114
-      Script: {instanceID: 19890}
+      Script: {instanceID: 19894}
     - Class: 114
-      Script: {instanceID: 20614}
+      Script: {instanceID: 20620}
     - Class: 114
-      Script: {instanceID: 20698}
+      Script: {instanceID: 20704}
     - Class: 114
-      Script: {instanceID: 20826}
+      Script: {instanceID: 20832}
     - Class: 114
-      Script: {instanceID: 21352}
+      Script: {instanceID: 21358}
     - Class: 114
-      Script: {instanceID: 21518}
+      Script: {instanceID: 21524}
     - Class: 114
-      Script: {instanceID: 21882}
+      Script: {instanceID: 21888}
     - Class: 114
-      Script: {instanceID: 25760}
+      Script: {instanceID: 35570}
     - Class: 114
-      Script: {instanceID: 25790}
+      Script: {instanceID: 35600}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -229,41 +233,41 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 16722}
     - Class: 114
-      Script: {instanceID: 17878}
+      Script: {instanceID: 17880}
     - Class: 114
-      Script: {instanceID: 17890}
+      Script: {instanceID: 17892}
     - Class: 114
-      Script: {instanceID: 18124}
+      Script: {instanceID: 18126}
     - Class: 114
-      Script: {instanceID: 18174}
+      Script: {instanceID: 18176}
     - Class: 114
-      Script: {instanceID: 18212}
+      Script: {instanceID: 18214}
     - Class: 114
-      Script: {instanceID: 18428}
+      Script: {instanceID: 18430}
     - Class: 114
-      Script: {instanceID: 18456}
+      Script: {instanceID: 18458}
     - Class: 114
-      Script: {instanceID: 18508}
+      Script: {instanceID: 18512}
     - Class: 114
-      Script: {instanceID: 18900}
+      Script: {instanceID: 18904}
     - Class: 114
-      Script: {instanceID: 20614}
+      Script: {instanceID: 20620}
     - Class: 114
-      Script: {instanceID: 20698}
+      Script: {instanceID: 20704}
     - Class: 114
-      Script: {instanceID: 20908}
+      Script: {instanceID: 20914}
     - Class: 114
-      Script: {instanceID: 21352}
+      Script: {instanceID: 21358}
     - Class: 114
-      Script: {instanceID: 21518}
+      Script: {instanceID: 21524}
     - Class: 114
-      Script: {instanceID: 21882}
+      Script: {instanceID: 21888}
     - Class: 114
-      Script: {instanceID: 22792}
+      Script: {instanceID: 22800}
     - Class: 114
-      Script: {instanceID: 23040}
+      Script: {instanceID: 23048}
     - Class: 114
-      Script: {instanceID: 23772}
+      Script: {instanceID: 23780}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -383,6 +387,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: SimpleScript
+  - hash:
+      serializedVersion: 2
+      Hash: fe21f4fb3ecdc08934483e2655d9be16
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HorseMovement
   - hash:
       serializedVersion: 2
       Hash: b12640dfdb5966813e9dd838893e6c4a
@@ -605,6 +615,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: Benchmark04
+  - hash:
+      serializedVersion: 2
+      Hash: 58299352f7a27b43c602773166ad9db7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: JaguarMovement
   - hash:
       serializedVersion: 2
       Hash: 041d89bf0470df44922eec73e9bf30e5
@@ -919,6 +935,12 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
+      Hash: d49fe6e573d19832bb0cbc5dd4adcc92
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MonkeyMovement
+  - hash:
+      serializedVersion: 2
       Hash: aa349b22cd61b9e8488d736f82590d6b
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
@@ -1223,6 +1245,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: a0fdac1db0934ae5327890744d0dd8db
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Movetowardsisland
   - hash:
       serializedVersion: 2
       Hash: febcfbf0a0d85e37808a3740e3c2c6fa
