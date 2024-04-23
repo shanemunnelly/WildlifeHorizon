@@ -15,11 +15,8 @@ public class MonkeyMovement : MonoBehaviour
     [SerializeField] float foodDetectionRange = 5f;
     [SerializeField] float animalSpeed = 5f;
     [SerializeField] float carryingFoodSpeed = 2f;
-    [SerializeField] float runningSpeed = 8f;
+    [SerializeField] float RunningSpeed = 8f;
     [SerializeField] float stoppingDistance = 1.5f;
-    [SerializeField] private Transform targetEmpty;
-    [SerializeField] private float FoodSpeed = 5f;
-    [SerializeField] float feedingRange = 3f; // Adjust this value to change feeding range
 
     bool playerInSight;
     bool foodInSight;
@@ -31,7 +28,7 @@ public class MonkeyMovement : MonoBehaviour
     [SerializeField] GameObject FoodEatButton;
     [SerializeField] GameObject book;
     [SerializeField] TextMeshProUGUI mainText;
-
+    //[SerializeField] GameObject EatText;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -45,6 +42,7 @@ public class MonkeyMovement : MonoBehaviour
     {
         if (isEating) return;
 
+
         playerInSight = Physics.CheckSphere(transform.position, sightRange, playerLayer);
         foodInSight = Physics.CheckSphere(transform.position, foodDetectionRange, foodLayer);
 
@@ -56,19 +54,24 @@ public class MonkeyMovement : MonoBehaviour
         {
             if (!playerInSight && !foodInSight) Patrol();
             if (playerInSight) Flee();
-        }
 
+
+        }
         if (Input.GetKeyDown(KeyCode.E)) // Change the key as needed
         {
             InteractWithObject();
         }
-
         if (Input.GetKeyDown(KeyCode.J)) // Change the key as needed
         {
             book.SetActive(!book.activeSelf);
-        }
 
-        if (Input.GetKeyDown(KeyCode.F) && hasFood && agent.isStopped && !isEating && IsPlayerInRange())
+        }
+        //if (Input.GetKeyDown(KeyCode.J))
+        //{
+        //    EatText.SetActive(true);
+        //}    
+
+        if (Input.GetKeyDown(KeyCode.F) && hasFood && agent.isStopped && !isEating)
         {
             isEating = true;
             FoodIcon.SetActive(false);
@@ -76,16 +79,15 @@ public class MonkeyMovement : MonoBehaviour
             foodItem.SetActive(true);
             animationController.SetBool("isEating", true);
             animationController.SetBool("isRunning", false);
-
-            // Start a coroutine to smoothly move the food item to the target position
-            StartCoroutine(MoveFoodItem(targetEmpty.position));
-
             Invoke("DoneEating", 2f);
+
         }
         else if (!agent.isStopped)
         {
             FoodEatButton.SetActive(false);
+
             animationController.SetBool("isRunning", true);
+
         }
         else
         {
@@ -93,18 +95,6 @@ public class MonkeyMovement : MonoBehaviour
             animationController.SetBool("isRunning", false);
         }
     }
-
-    private IEnumerator MoveFoodItem(Vector3 targetPosition)
-    {
-        float distance = Vector3.Distance(foodItem.transform.position, targetPosition);
-        while (distance > 0.01f)
-        {
-            foodItem.transform.position = Vector3.MoveTowards(foodItem.transform.position, targetPosition, FoodSpeed * Time.deltaTime);
-            distance = Vector3.Distance(foodItem.transform.position, targetPosition);
-            yield return null;
-        }
-    }
-
     void DoneEating()
     {
         foodItem.SetActive(false);
@@ -113,39 +103,56 @@ public class MonkeyMovement : MonoBehaviour
         agent.isStopped = false;
         isEating = hasFood = false;
         mainText.enabled = true;
+        //Display Information here
+        //   EatText.SetActive(true);
+
     }
+
+
 
     void FollowPlayerWithFood()
     {
+        // Set the destination to the player's position
         agent.SetDestination(player.transform.position);
+
+        // Check the distance between the animal and the player
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
+        // If the distance is less than the stopping distance, stop the animal
         if (distanceToPlayer <= stoppingDistance)
         {
             agent.velocity = Vector3.zero;
             agent.isStopped = true;
+
         }
         else
         {
+            // Adjust the speed when the player has food
             agent.isStopped = false;
             agent.speed = carryingFoodSpeed;
         }
+       ;
     }
-
     void Flee()
     {
         Vector3 dirToPlayer = transform.position - player.transform.position;
+
         Vector3 newPos = transform.position + dirToPlayer;
-        agent.speed = runningSpeed;
+        agent.speed = RunningSpeed;
         agent.SetDestination(newPos);
+        /*    Debug.Log("Fleeing from player");
+            agent.SetDestination(player.transform.position)*/
+        ;
     }
 
     void Patrol()
     {
+
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
         {
             SearchForDest();
         }
+
     }
 
     void SearchForDest()
@@ -165,10 +172,13 @@ public class MonkeyMovement : MonoBehaviour
 
     void InteractWithObject()
     {
+        // Assuming there is an object with a collider and interactable script
+        // This can be adjusted based on your specific game design
         Collider interactableCollider = null;
+
+        // Example: Raycast to check if the player is interacting with an object
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-
         if (Physics.Raycast(ray, out hit))
         {
             interactableCollider = hit.collider;
@@ -176,22 +186,22 @@ public class MonkeyMovement : MonoBehaviour
 
         if (interactableCollider != null)
         {
+            // Check if the interactable object is a food item generator
             FoodItemGenerator foodGenerator = interactableCollider.GetComponent<FoodItemGenerator>();
 
             if (foodGenerator != null)
             {
+                // Generate the food item
                 foodGenerator.GenerateFoodItem();
+                print("Food Generated");
+                // Set the hasFood flag to true
+
                 hasFood = true;
+
+                // You can add additional logic here if needed
             }
         }
     }
-
-    bool IsPlayerInRange()
-    {
-        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        return distanceToPlayer <= feedingRange;
-    }
-
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, sightRange);

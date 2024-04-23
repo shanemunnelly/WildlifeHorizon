@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "670573873039",
+    "firebase_url": "https://wildlifehorizon-df5dc-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "wildlifehorizon-df5dc",
+    "storage_bucket": "wildlifehorizon-df5dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670573873039:android:9658a750479ed6d5482dfa",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.Wildlife"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRJSV02Dw5_93r8U3kT57qkctYXaCmGfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

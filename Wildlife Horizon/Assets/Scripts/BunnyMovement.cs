@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
+
 public class BunnyMovement : MonoBehaviour
 {
     GameObject player;
@@ -25,6 +26,9 @@ public class BunnyMovement : MonoBehaviour
     [SerializeField] GameObject FoodEatButton;
     [SerializeField] GameObject book;
     [SerializeField] TextMeshProUGUI mainText;
+
+
+    [SerializeField] Transform page;
     //[SerializeField] GameObject EatText;
     void Start()
     {
@@ -58,11 +62,11 @@ public class BunnyMovement : MonoBehaviour
         {
             InteractWithObject();
         }
-        if (Input.GetKeyDown(KeyCode.J)) // Change the key as needed
-        {
-            book.SetActive(!book.activeSelf);
+        // if (Input.GetKeyDown(KeyCode.J)) // Change the key as needed
+        // {
+        //     book.SetActive(!book.activeSelf);
 
-        }
+        // }
         //if (Input.GetKeyDown(KeyCode.J))
         //{
         //    EatText.SetActive(true);
@@ -99,7 +103,10 @@ public class BunnyMovement : MonoBehaviour
         animationController.SetBool("isRunning", true);
         agent.isStopped = false;
         isEating = hasFood = false;
-        mainText.enabled = true;
+        Journal.unlocledPages.Add(page);
+        FoodItemGenerator.totalFoodAte++;
+
+        //    mainText.enabled = true;
         //Display Information here
         //   EatText.SetActive(true);
 

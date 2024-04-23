@@ -8,7 +8,7 @@ public class FoodItemGenerator : MonoBehaviour
 
     private Camera mainCamera;
     private RaycastHit hit;
-
+    public static int totalFoodAte = 0;
     private void Start()
     {
         mainCamera = Camera.main;
@@ -44,6 +44,7 @@ public class FoodItemGenerator : MonoBehaviour
 
     public void GenerateFoodItem()
     {
+        Instantiate(foodItemPrefab, transform.position, Quaternion.identity);
         FoodUI.SetActive(true);
 
     }

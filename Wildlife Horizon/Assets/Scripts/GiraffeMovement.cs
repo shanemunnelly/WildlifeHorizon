@@ -26,6 +26,8 @@ public class GiraffeMovement : MonoBehaviour
     [SerializeField] GameObject book;
     [SerializeField] TextMeshProUGUI mainText;
     //[SerializeField] GameObject EatText;
+    [SerializeField] Transform page;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -58,11 +60,11 @@ public class GiraffeMovement : MonoBehaviour
         {
             InteractWithObject();
         }
-        if (Input.GetKeyDown(KeyCode.J)) // Change the key as needed
-        {
-            book.SetActive(!book.activeSelf);
+        // if (Input.GetKeyDown(KeyCode.J)) // Change the key as needed
+        // {
+        //     book.SetActive(!book.activeSelf);
 
-        }
+        // }
         //if (Input.GetKeyDown(KeyCode.J))
         //{
         //    EatText.SetActive(true);
@@ -99,7 +101,10 @@ public class GiraffeMovement : MonoBehaviour
         animationController.SetBool("isRunning", true);
         agent.isStopped = false;
         isEating = hasFood = false;
-        mainText.enabled = true;
+        FoodItemGenerator.totalFoodAte++;
+        print(FoodItemGenerator.totalFoodAte);
+        Journal.unlocledPages.Add(page);
+        //        mainText.enabled = true;
         //Display Information here
         //   EatText.SetActive(true);
 

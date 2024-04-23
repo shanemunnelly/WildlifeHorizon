@@ -17,7 +17,16 @@ public class playermovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
     bool isCrouching = false; // Track crouching state
-
+    private void OnEnable()
+    {
+        QuestionMarkMissionTrigger.eventOnQuestionMarkTriggered += DisablePlayerControls;
+        MissionAskQuestions.eventOnMissionCompleted += EnablePlayerControls;
+    }
+    private void Disable()
+    {
+        QuestionMarkMissionTrigger.eventOnQuestionMarkTriggered -= DisablePlayerControls;
+        MissionAskQuestions.eventOnMissionCompleted -= EnablePlayerControls;
+    }
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -50,5 +59,25 @@ public class playermovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+    void EnablePlayerControls()
+    {
+        SetPlayerControls(true);
+    }
+    void DisablePlayerControls()
+    {
+        SetPlayerControls(false);
+    }
+    private void SetPlayerControls(bool isEnable)
+    {
+
+        Cursor.visible = !isEnable;
+        if (!isEnable)
+            Cursor.lockState = CursorLockMode.None;
+        else
+            Cursor.lockState = CursorLockMode.Locked;
+
+        controller.enabled = isEnable;
+        Camera.main.GetComponent<MouseLook>().enabled = isEnable;
     }
 }
